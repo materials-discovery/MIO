@@ -138,7 +138,7 @@
 #################################################################
 
 ###  http://www.ddmd.io/mio/Anaysis
-:Anaysis rdf:type owl:Class ;
+:Analysis rdf:type owl:Class ;
          rdfs:subClassOf :Process_Step ;
          rdfs:comment "Represents the examination and interpretation of collected data to extract meaningful insights and draw conclusions." ;
          rdfs:label "Analysis" .
@@ -177,6 +177,17 @@
          rdfs:comment "Represents a collection of related data or information, often organized for analysis, presentation, or sharing." ;
          rdfs:label "Data Set" .
 
+
+
+:CUDS rdf:type owl:Class ;
+         rdfs:subClassOf :DataSet ;
+         rdfs:comment "An Common Universal/Unified Data Structure" ;
+         rdfs:label "Common Universal and Unified Data Structure" .
+
+:SDS rdf:type owl:Class ;
+         rdfs:subClassOf :CUDS ;
+         rdfs:comment "An ontology Based, fully semantic Common Universal/Unified Data Structure" ;
+         rdfs:label "Semantic Data Structure or Set" .
 
 ###  http://www.ddmd.io/mio/Data_Analysis
 :Data_Analysis rdf:type owl:Class ;
@@ -289,6 +300,27 @@
 
 ###  http://www.ddmd.io/mio/Matter
 :Matter rdf:type owl:Class .
+
+###  http://www.ddmd.io/mio/entity
+:entity rdf:type owl:Class ;
+                        rdfs:comment "Represents the an entity as in individual, organisation, group that participates in some activity" ;
+                        rdfs:label "Entity" .
+
+:Participant rdf:type owl:Class ;
+        rdfs:subClassOf :entity ;
+        rdfs:comment "Represents the an entity as in individual, organisation, group that participates in some activity" .
+
+:Agent rdf:type owl:Class ;
+        rdfs:subClassOf :Stakeholder ;
+        rdfs:comment "Represents the an entity as in individual, organisation, group that participates in some activity" .
+
+:Actor rdf:type owl:Class ;
+        rdfs:subClassOf :Agent ;
+        rdfs:comment "Represents an entity as in individual, organisation, group that activetely participates in some activity" .
+
+:Stakeholder rdf:type owl:Class ;
+        rdfs:subClassOf :Participant ;
+        rdfs:comment "Represents the an entity as in individual, organisation, group that has a stake (vested in) some aspect of .." .
 
 
 ###  http://www.ddmd.io/mio/Measurement
