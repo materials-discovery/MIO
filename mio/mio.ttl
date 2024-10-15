@@ -141,7 +141,7 @@
 #    Classes
 #################################################################
 
-###  http://www.ddmd.io/mio/Anaysis
+###  http://www.ddmd.io/mio/Analysis
 :Analysis rdf:type owl:Class ;
          rdfs:subClassOf :Process_Step ;
          rdfs:comment "Represents the examination and interpretation of collected data to extract meaningful insights and draw conclusions." ;
